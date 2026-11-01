@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 2 — Округлення числа</title>
+</head>
+<body>
+    <h1>Завдання 2. Чому 6.35.toFixed(1) повертає 6.3?</h1>
+    <p>Десяткові дроби зберігаються у двійковому форматі, тому 6.35 може бути представлене трохи меншим числом.</p>
+    <script>
+        "use strict";
+
+        const original = 6.35;
+        const roundedByToFixed = original.toFixed(1);
+        const corrected = Math.round(original * 10) / 10;
+
+        alert("6.35.toFixed(1) = " + roundedByToFixed
+            + "\nПравильне округлення: " + corrected);
+        console.log("6.35.toFixed(20) =", original.toFixed(20));
+        console.log("Округлення:", corrected);
+    </script>
+</body>
+</html>

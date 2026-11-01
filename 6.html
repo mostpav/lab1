@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 6 — Перевірка на спам</title>
+</head>
+<body>
+    <h1>Завдання 6. Перевірка на спам</h1>
+    <script>
+        "use strict";
+
+        function checkSpam(str) {
+            const lowerStr = str.toLowerCase();
+
+            return lowerStr.includes("viagra") || lowerStr.includes("xxx");
+        }
+
+        const text = prompt("Введіть текст для перевірки:", "");
+        alert(checkSpam(text || "")
+            ? "У тексті знайдено заборонені слова."
+            : "Заборонених слів не знайдено.");
+    </script>
+</body>
+</html>

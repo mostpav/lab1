@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 7 — Урізання тексту</title>
+</head>
+<body>
+    <h1>Завдання 7. Урізання тексту</h1>
+    <script>
+        "use strict";
+
+        function truncate(str, maxlength) {
+            return str.length > maxlength
+                ? str.slice(0, maxlength - 1) + "…"
+                : str;
+        }
+
+        const text = prompt("Введіть текст:", "Що я хотів би розповісти на цю тему:");
+        const maxlength = Number(prompt("Введіть максимальну довжину:", "20"));
+
+        if (!Number.isInteger(maxlength) || maxlength < 1) {
+            alert("Максимальна довжина має бути цілим числом, більшим за 0.");
+        } else {
+            alert(truncate(text || "", maxlength));
+        }
+    </script>
+</body>
+</html>

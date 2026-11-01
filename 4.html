@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 4 — Випадкове ціле число</title>
+</head>
+<body>
+    <h1>Завдання 4. Довільне ціле число від min до max</h1>
+    <script>
+        "use strict";
+
+        function randomInteger(min, max) {
+            return Math.floor(min + Math.random() * (max + 1 - min));
+        }
+
+        const min = Number(prompt("Введіть мінімальне ціле число:", "1"));
+        const max = Number(prompt("Введіть максимальне ціле число:", "5"));
+
+        if (!Number.isInteger(min) || !Number.isInteger(max) || min > max) {
+            alert("Введіть цілі числа так, щоб min не перевищував max.");
+        } else {
+            alert("Випадкове число: " + randomInteger(min, max));
+        }
+    </script>
+</body>
+</html>

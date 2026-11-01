@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1 — Сума чисел</title>
+</head>
+<body>
+    <h1>Завдання 1. Сума чисел від відвідувача</h1>
+    <script>
+        "use strict";
+
+        const a = Number(prompt("Введіть перше число:", ""));
+        const b = Number(prompt("Введіть друге число:", ""));
+
+        if (Number.isFinite(a) && Number.isFinite(b)) {
+            alert("Сума чисел: " + (a + b));
+        } else {
+            alert("Помилка: потрібно ввести два коректні числа.");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 8 — Виділення грошового значення</title>
+</head>
+<body>
+    <h1>Завдання 8. Виділіть гроші</h1>
+    <script>
+        "use strict";
+
+        function extractCurrencyValue(str) {
+            return Number(str.slice(1));
+        }
+
+        const price = prompt("Введіть вартість у форматі $120:", "$120");
+        const value = extractCurrencyValue(price || "");
+
+        if (Number.isFinite(value)) {
+            alert("Числове значення: " + value);
+        } else {
+            alert("Не вдалося розпізнати числове значення.");
+        }
+    </script>
+</body>
+</html>

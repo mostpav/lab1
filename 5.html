@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 5 — Перший символ у верхній регістр</title>
+</head>
+<body>
+    <h1>Завдання 5. Переведіть перший символ у верхній регістр</h1>
+    <script>
+        "use strict";
+
+        function ucFirst(str) {
+            if (!str) {
+                return str;
+            }
+
+            return str[0].toUpperCase() + str.slice(1);
+        }
+
+        const text = prompt("Введіть слово або рядок:", "василь");
+        alert(ucFirst(text));
+    </script>
+</body>
+</html>

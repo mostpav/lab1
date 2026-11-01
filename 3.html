@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 3 — Нескінченний цикл</title>
+</head>
+<body>
+    <h1>Завдання 3. Випадковий безкінечний цикл</h1>
+    <p>Причина: через похибки представлення дробів змінна i може ніколи точно не дорівнювати 10.</p>
+    <script>
+        "use strict";
+
+        // Лічильник є цілим числом, а десяткове значення обчислюється окремо.
+        for (let step = 1; step <= 50; step++) {
+            const i = step * 0.2;
+
+            if (i > 9.8 && i < 10.2) {
+                console.log(i);
+            }
+        }
+
+        alert("Цикл завершився. Для перевірки значень відкрийте консоль браузера (F12).");
+    </script>
+</body>
+</html>
